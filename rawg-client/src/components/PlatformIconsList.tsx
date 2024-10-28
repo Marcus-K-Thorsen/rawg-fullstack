@@ -8,6 +8,7 @@ import {
   FaLinux,
   FaAndroid,
   FaSteam,
+  FaWrench
 } from "react-icons/fa";
 
 import { MdPhoneIphone } from "react-icons/md";
@@ -36,29 +37,32 @@ const PlatformIconsList = ({ platforms }: Props) => {
 
   const getIcon = (slug: string) => {
     switch (slug) {
-      case "windows":
-        return FaWindows;
-      case "xbox":
-        return FaXbox;
-      case "playstation":
-        return FaPlaystation;
-      case "apple":
-        return FaApple;
-      case "linux":
-        return FaLinux;
-      case "android":
-        return FaAndroid;
-      case "steam":
-        return FaSteam;
-      case "iphone":
-        return MdPhoneIphone;
-      case "nintendo":
-        return SiNintendo;
-      case "web":
-        return BsGlobe;
-      default:
-        return FaWindows;
-    }
+        case "windows":
+        case "pc":
+            return FaWindows;
+        case "xbox":
+            return FaXbox;
+        case "playstation":
+            return FaPlaystation;
+        case "apple":
+        case "mac":
+            return FaApple;
+        case "linux":
+            return FaLinux;
+        case "android":
+            return FaAndroid;
+        case "steam":
+            return FaSteam;
+        case "iphone":
+        case "ios":
+            return MdPhoneIphone;
+        case "nintendo":
+            return SiNintendo;
+        case "web":
+            return BsGlobe;
+        default:
+            return FaWrench;
+      }
   };
 
   return (
